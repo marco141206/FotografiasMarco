@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio de Sesión</title>
+  <link rel="stylesheet" href="inicio-sesion.css" />
+  <!-- Íconos de Font Awesome (opcional, requiere conexión a Internet) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</h2>
+    <form id="loginForm" action="./index.html" method="get" novalidate>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" name="usuario" placeholder="Usuario" required />
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" name="password" placeholder="Contraseña" required />
+      </div>
+      <input type="submit" value="Entrar" />
+    </form>
+    <div class="extra">
+      ¿No tienes cuenta? <a href="./registro.html">Regístrate</a>
+    </div>
+  </div>
+
+  <script>
+    // Validación visual simple
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', function (e) {
+      const inputs = form.querySelectorAll('input[required]');
+      let valid = true;
+      inputs.forEach(input => {
+        if (!input.value.trim()) {
+          input.classList.add('invalid');
+          valid = false;
+        } else {
+          input.classList.remove('invalid');
+        }
+      });
+      if (!valid) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>

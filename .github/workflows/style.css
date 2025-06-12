@@ -1,0 +1,78 @@
+.bg {
+    background-image: url(./bg.avif);
+    background-size: cover;
+    background-position: center;
+    }
+/* Botón para inicio de sesión */
+.btn-inicio-sesion {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF8000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* para que esté sobre otros elementos */
+}
+
+
+.TITULO {
+    font-size: 300%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.img{
+
+    width: 25%;
+    border-radius: 5%;
+    
+}
+
+.carrusel{
+
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.carrusel::-webkit-scrollbar {
+    height: 12px;
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+    background-color: #FF8000;
+    border-radius: 5px;
+}
+
+.logo {
+
+    width: 19%;
+    height: 19%;
+    border-radius: 50%;
+}
+.boton {
+
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF8000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #e77400;
+  }
+
+  .reseñas {
+
+    background-color: #f4f4f4; 
+}
