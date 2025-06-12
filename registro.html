@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro</title>
+  <link rel="stylesheet" href="registro.css" />
+  <link rel="shortcut icon" href="./LOGO.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="register-container">
+    <h2><i class="fas fa-user-plus"></i> Crear Cuenta</h2>
+    <form id="registerForm" novalidate>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Nombre de usuario" required />
+      </div>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Correo electrónico" required />
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Contraseña" required />
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Confirmar contraseña" required />
+      </div>
+     <a href="inicio-sesion.html" class="boton-registro">Registrarse</a>
+    </form>
+    <div class="extra">
+      ¿Ya tienes cuenta? <a href="./inicio-sesion.html">Inicia sesión</a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('registerForm');
+    form.addEventListener('submit', function (e) {
+      const inputs = form.querySelectorAll('input[required]');
+      let valid = true;
+      inputs.forEach(input => {
+        if (!input.value.trim()) {
+          input.classList.add('invalid');
+          valid = false;
+        } else {
+          input.classList.remove('invalid');
+        }
+      });
+
+      const password = inputs[2].value;
+      const confirmPassword = inputs[3].value;
+      if (password !== confirmPassword) {
+        inputs[2].classList.add('invalid');
+        inputs[3].classList.add('invalid');
+        valid = false;
+      }
+
+      if (!valid) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>

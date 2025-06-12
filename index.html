@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FOTOGRAFÍA MARCO</title>
+  <link rel="shortcut icon" href="./LOGO.ico" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg">
+  <header>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon" role="button" aria-label="Abrir o cerrar menú">☰</label>
+  <nav class="menu">
+    <a href="#">Inicio</a>
+    <a href="./reseñas.html">Reseñas</a>
+    <a href="./historias.html">Historias de Amor</a>
+    <a href="#sobre-nosotros">Sobre Nosotros</a>
+    <a href="inicio-sesion.html">Iniciar Sesión</a>
+  </nav>
+
+  <img src="https://i.pinimg.com/originals/f4/7d/b1/f47db11e74932b689d2f1ef7364f0bd8.gif" alt="Logo" class="logo">
+  <h1 class="titulo">FOTOGRAFÍA MARCO</h1>
+  <hr>
+</header>
+     
+<div class="carrusel-scroll">
+      <img title="Boda de Pepe y María" class="img" src="https://cdn.pixabay.com/photo/2023/08/21/16/58/couple-8204717_1280.jpg" alt="Boda de Pepe y María" />
+      <img title="Aisha posando" class="img" src="https://cdn.pixabay.com/photo/2023/12/22/01/37/woman-8463055_1280.jpg" alt="Aisha posando" />
+      <img title="Gemelas posando" class="img" src="https://cdn.pixabay.com/photo/2023/03/12/13/54/girls-7846958_1280.jpg" alt="Gemelas posando" />
+      <img title="Carmen posando" class="img" src="https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_960_720.jpg" alt="Carmen posando" />
+      <img title="Mario posando" class="img" src="https://cdn.pixabay.com/photo/2020/10/14/03/18/man-5653200_960_720.jpg" alt="Mario posando" />
+      <img title="Eva posando" class="img" src="https://cdn.pixabay.com/photo/2022/02/04/12/49/woman-6992691_960_720.jpg" alt="Eva posando" />
+  </div>
+</div>
+
+    
+    <hr />
+
+    <section id="reseñas" class="reseñas hidden">
+      <h2>RESEÑAS</h2>
+      <p> Aquí encontrarás las experiencias y emociones de nuestros clientes...</p>
+      <div class="carrusel">
+        <img title="RESEÑA1" class="img" src="./reseña1.jpg" alt="Reseña 1" />
+        <img title="RESEÑA2" class="img" src="./RESEÑA2.jpg" alt="Reseña 2" />
+        <img title="RESEÑA3" class="img" src="./reseña3.jpg" alt="Reseña 3" />
+        <img title="RESEÑA4" class="img" src="./reseña4.jpg" alt="Reseña 4" />
+        <img title="RESEÑA5" class="img" src="./reseña5.jpg" alt="Reseña 5" />
+      </div>
+    </section>
+
+    <section id="sobre-nosotros">
+  <h2>Sobre Nosotros</h2>
+  <p>
+    En <strong>Fotografía Marco</strong>, capturamos más que imágenes: capturamos momentos que cuentan historias. 
+    Con una pasión por la luz, el detalle y la emoción, llevamos más de 10 años inmortalizando recuerdos únicos 
+    para personas, marcas y eventos.
+  </p>
+  <p>
+    Nuestro enfoque combina la estética artística con la precisión técnica, ofreciendo un estilo visual que 
+    refleja autenticidad, naturalidad y profesionalismo. Ya sea una boda, un retrato o una sesión comercial, 
+    tu historia es nuestra inspiración.
+  </p>
+  <p>
+    Bienvenidos al lugar donde cada imagen tiene alma. Bienvenidos a <strong>Fotografía Marco</strong>.
+    <br>
+    <br>
+    Nos encontramos en: 
+    <br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3127.4842935731567!2d-0.7694269240877066!3d38.38404997183821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzjCsDIzJzAyLjYiTiAwwrA0NicwMC43Ilc!5e0!3m2!1ses!2ses!4v1749747652048!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </p>
+</section>
+
+  </main>
+
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('hidden');
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+/* ===== RESET Y BASE ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('bg.avif') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ===== HEADER Y LOGO ===== */
+header {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  float: left;
+  width: 100px;
+  height: auto;
+  margin: 0 1rem;
+}
+
+.titulo {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* ===== MENÚ ===== */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+}
+
+.menu {
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.menu a:hover {
+  background-color: #ff8000;
+}
+
+/* ===== MAIN Y CONTENIDO ===== */
+main {
+  width: 90%;
+  max-width: 1200px;
+}
+
+.carrusel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.img {
+  max-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff8000;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.boton:hover {
+  background-color: #e67300;
+  transform: scale(1.05);
+}
+
+.reseñas,
+#historias,
+#sobre-nosotros {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem 0;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    z-index: 1000;
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+}
+
+.carrusel-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-behavior: smooth;
+}
+
+.carrusel-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.carrusel-scroll::-webkit-scrollbar-thumb {
+  background-color: #ff8000;
+  border-radius: 6px;
+}
+
+.carrusel-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.img {
+  flex-shrink: 0;
+  width: 200px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+#sobre-nosotros {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#sobre-nosotros h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#sobre-nosotros p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}

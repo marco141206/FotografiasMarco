@@ -1,0 +1,103 @@
+.section {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: #ff8000;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.section:hover {
+  background-color: rgba(255, 128, 0, 0.9);
+  color: white;
+}
+
+body.bg2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('bg.avif') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+.section {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #ff8000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+}
+
+.service-card h2 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-card li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.si {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  background-color: #ff8000;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.si:hover {
+  background-color: #ff8000;
+}
+
+.footer-img {
+  display: block;
+  margin: 40px auto 0;
+  max-width: 200px;
+}
+
+@media (max-width: 700px) {
+  .service-card {
+    width: 90%;
+  }
+}
